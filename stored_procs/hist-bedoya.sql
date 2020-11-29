@@ -1,4 +1,4 @@
-CREATE DEFINER=`audioblastssh`@`localhost` PROCEDURE `hist-bedoya`(
+CREATE PROCEDURE `hist-bedoya`(
     IN bincount INT UNSIGNED)
 BEGIN
     SET @width := (SELECT MAX(CAST(`value` AS DECIMAL(18, 4))) FROM `audioblast`.`analysis-bedoya` WHERE `value` != '')/bincount; 
